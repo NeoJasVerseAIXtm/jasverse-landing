@@ -11,7 +11,8 @@
       min-height: 100vh;
       font-family: "Segoe UI", Arial, sans-serif;
       background:
-        radial-gradient(circle at 50% 35%, rgba(255, 0, 90, 0.18), transparent 28%),
+        radial-gradient(circle at 50% 28%, rgba(0, 185, 255, 0.16), transparent 26%),
+        radial-gradient(circle at 50% 40%, rgba(255, 0, 90, 0.18), transparent 30%),
         radial-gradient(circle at 50% 100%, rgba(255, 0, 90, 0.16), transparent 34%),
         linear-gradient(180deg, #03050a 0%, #080910 55%, #03050a 100%);
       color: #ffffff;
@@ -39,13 +40,14 @@
     .pill {
       display: inline-block;
       padding: 10px 26px;
-      border: 1px solid rgba(255, 0, 100, 0.55);
+      border: 1px solid rgba(0, 185, 255, 0.75);
       border-radius: 999px;
-      color: #e7e7e7;
+      color: #dff8ff;
       letter-spacing: 0.42em;
       font-size: 0.75rem;
       text-transform: uppercase;
       margin-bottom: 30px;
+      box-shadow: 0 0 18px rgba(0, 185, 255, 0.20);
     }
 
     h1 {
@@ -60,7 +62,7 @@
     .powered {
       font-size: clamp(1.25rem, 3vw, 2rem);
       color: #cfcfd6;
-      margin-bottom: 8px;
+      margin-bottom: 0;
     }
 
     .aiqx {
@@ -69,23 +71,47 @@
       font-weight: 900;
       line-height: 0.9;
       letter-spacing: 0.03em;
-      background: linear-gradient(110deg, #ff003c 0%, #ff5278 25%, #ffffff 52%, #7a7f8d 72%, #ffffff 100%);
+      background: linear-gradient(110deg, #ff003c 0%, #ff5278 24%, #ffffff 52%, #8d93a3 73%, #ffffff 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       text-shadow: 0 0 28px rgba(255, 0, 70, 0.45);
-      margin: 8px 0 20px;
+      margin: 4px 0 18px;
+    }
+
+    .tm {
+      color: #e8edf5;
+      text-shadow: 0 0 12px rgba(255,255,255,0.45);
+      font-size: 0.42em;
+      vertical-align: super;
+      margin-left: 6px;
     }
 
     .subtitle {
       color: #e7e7ec;
       font-size: clamp(1.1rem, 2.3vw, 1.55rem);
       line-height: 1.5;
-      margin-bottom: 36px;
+      margin-bottom: 18px;
     }
 
-    .subtitle strong {
+    .quantum {
+      color: #00c8ff;
+      font-weight: 900;
+      text-shadow: 0 0 14px rgba(0, 200, 255, 0.55);
+    }
+
+    .ai {
       color: #ff285c;
+      font-weight: 900;
+      text-shadow: 0 0 12px rgba(255, 40, 92, 0.45);
+    }
+
+    .mission {
+      max-width: 780px;
+      margin: 0 auto 34px;
+      color: #bfc7d5;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     .cta {
@@ -102,24 +128,27 @@
       box-shadow: 0 0 22px rgba(255, 0, 80, 0.25);
       transition: 0.25s ease;
       margin-bottom: 18px;
+      cursor: pointer;
     }
 
-    .cta:hover {
-      background: rgba(255, 0, 80, 0.20);
-      transform: translateY(-2px);
+    .cta:hover, .clickable:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 0, 80, 0.15);
+      border-color: rgba(0, 200, 255, 0.55);
+      box-shadow: 0 0 26px rgba(0, 200, 255, 0.18), 0 0 22px rgba(255, 0, 80, 0.20);
     }
 
-    .access {
+    .status-line {
       color: #bdbdc7;
-      letter-spacing: 0.36em;
+      letter-spacing: 0.24em;
       font-size: 0.76rem;
       text-transform: uppercase;
       margin: 6px 0 54px;
     }
 
-    .access span {
-      color: #ff285c;
-      font-weight: 800;
+    .status-line span {
+      color: #57ff72;
+      font-weight: 900;
     }
 
     .section-title {
@@ -143,6 +172,11 @@
       padding: 24px 14px;
       background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
       box-shadow: inset 0 0 22px rgba(255, 0, 80, 0.03);
+      transition: 0.25s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     .icon {
@@ -192,6 +226,33 @@
     footer .footer-aiqx {
       color: #ff285c;
       font-weight: 900;
+      text-shadow: 0 0 10px rgba(255, 40, 92, 0.35);
+    }
+
+    footer .meaning {
+      margin-top: 8px;
+      color: #00c8ff;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .notice {
+      display: none;
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      background: rgba(3, 5, 10, 0.92);
+      border: 1px solid rgba(0, 200, 255, 0.55);
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: 999px;
+      box-shadow: 0 0 28px rgba(0, 200, 255, 0.22);
+      z-index: 50;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     @media (max-width: 980px) {
@@ -210,85 +271,104 @@
 <body>
   <main class="page">
     <section class="frame">
-      <div class="pill">Quantum AI Ecosystem</div>
+      <button class="pill clickable" onclick="showNotice()">Quantum AI Ecosystem</button>
 
       <h1>JASVERSE®</h1>
 
       <div class="powered">Powered by</div>
-      <div class="aiqx">AIQX™</div>
+      <div class="aiqx">AIQX<span class="tm">™</span></div>
 
       <p class="subtitle">
-        Quantum <strong>AI</strong> for Apps, Startups, Modules<br />
+        <span class="quantum">Quantum</span> <span class="ai">AI</span> for Apps, Startups, Modules<br />
         & Autonomous Systems
       </p>
 
-      <a href="#" class="cta">🔑 Enter with TheBossKeyAIQX™</a>
+      <p class="mission">
+        JASVERSE is a Quantum AI-powered ecosystem focused on creating applications,
+        startups, software modules and autonomous systems for the next generation.
+      </p>
 
-      <div class="access">Access Level: <span>Restricted</span></div>
+      <a href="javascript:void(0)" class="cta" onclick="showNotice()">🔑 Enter with TheBossKeyAIQX<span class="tm">™</span></a>
+
+      <div class="status-line">Ecosystem Status: <span>Active</span></div>
 
       <h2 class="section-title">The JasVerse Vision</h2>
 
       <div class="grid">
-        <div class="card">
+        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
           <div class="icon">🧠</div>
           <h3>AI Applications</h3>
           <p>Intelligent solutions for the next generation.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
           <div class="icon">🚀</div>
           <h3>Startup Innovation</h3>
           <p>Building and scaling the future.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
           <div class="icon">⌘</div>
           <h3>Automation</h3>
           <p>Processes that think, learn and evolve.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
           <div class="icon">◈</div>
           <h3>Open Source Tech</h3>
           <p>Knowledge shared, future amplified.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
           <div class="icon">⚙️</div>
           <h3>Autonomous Systems</h3>
           <p>Systems that operate and evolve autonomously.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
           <div class="icon">▦</div>
           <h3>Digital Infrastructure</h3>
           <p>Secure, scalable and always online.</p>
-        </div>
+        </a>
       </div>
 
       <h2 class="section-title">Current Status</h2>
 
       <div class="status">
-        <div class="status-card">
+        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
           <h3>Infrastructure</h3>
           <strong class="green">ONLINE</strong>
-        </div>
-        <div class="status-card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
           <h3>Security</h3>
           <strong class="green">ACTIVE</strong>
-        </div>
-        <div class="status-card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
           <h3>Development</h3>
           <strong class="yellow">IN PROGRESS</strong>
-        </div>
-        <div class="status-card">
+        </a>
+        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
           <h3>Launch</h3>
           <strong class="blue">COMING SOON</strong>
-        </div>
+        </a>
       </div>
 
       <footer>
         <div class="brand">JASVERSE®</div>
-        <div>Powered by <span class="footer-aiqx">AIQX™</span></div>
+        <div>Powered by <span class="footer-aiqx">AIQX<span class="tm">™</span></span></div>
+        <div class="meaning">Artificial Intelligence Quantic eXperience</div>
         <br />
         <div>© 2026 JASVERSE. All Rights Reserved.</div>
       </footer>
     </section>
   </main>
+
+  <div id="notice" class="notice">Module access coming soon</div>
+
+  <script>
+    function showNotice() {
+      const notice = document.getElementById("notice");
+      notice.style.display = "block";
+      clearTimeout(window.jasverseNoticeTimer);
+      window.jasverseNoticeTimer = setTimeout(function () {
+        notice.style.display = "none";
+      }, 1800);
+    }
+  </script>
 </body>
 </html>
