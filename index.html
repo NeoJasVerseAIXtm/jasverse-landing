@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>JASVERSE® | Powered by AIQX™</title>
   <link rel="icon" type="image/png" href="Stemma%20JasVerse.png">
-
-  <meta name="description" content="JASVERSE® is a Quantum AI-powered ecosystem focused on applications, startups, software, modules and autonomous systems for the next generation.">
-
-  <meta property="og:title" content="JASVERSE® | Powered by AIQX™">
-  <meta property="og:description" content="Quantum AI for Apps, Startups, Modules & Autonomous Systems.">
+  <meta name="description" content="JASVERSE® — Italian ecosystem for apps and startups that put you in control. No middlemen. No compromise.">
+  <meta property="og:title" content="JASVERSE® | Control Your Data">
+  <meta property="og:description" content="Apps built for people who want real control. No Google. No Facebook. Just you.">
   <meta property="og:image" content="https://jasverse.com/Stemma%20JasVerse.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jasverse.com/">
-
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="JASVERSE® | Powered by AIQX™">
-  <meta name="twitter:description" content="Quantum AI for Apps, Startups, Modules & Autonomous Systems.">
+  <meta name="twitter:title" content="JASVERSE® | Control Your Data">
+  <meta name="twitter:description" content="Apps built for people who want real control.">
   <meta name="twitter:image" content="https://jasverse.com/Stemma%20JasVerse.png">
-
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    
     body {
       min-height: 100vh;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -33,397 +28,357 @@
         linear-gradient(180deg, #03050a 0%, #080910 55%, #03050a 100%);
       color: #ffffff;
       overflow-x: hidden;
-      text-align: center;
     }
-
-    .page { width: 100%; min-height: 100vh; padding: 34px 22px 28px; }
-
-    .frame {
-      max-width: 1180px;
+    
+    .container {
+      max-width: 1000px;
       margin: 0 auto;
-      border: 1px solid rgba(255, 0, 100, 0.28);
-      border-radius: 22px;
-      padding: 36px 28px 28px;
-      background: rgba(3, 5, 10, 0.74);
-      box-shadow: 0 0 50px rgba(255, 0, 90, 0.10);
+      padding: 60px 24px;
     }
-
-    .pill {
-      display: inline-block;
-      padding: 10px 26px;
-      border: 1px solid rgba(0, 185, 255, 0.75);
-      border-radius: 999px;
-      color: #dff8ff;
-      letter-spacing: 0.42em;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      background: transparent;
-      box-shadow: 0 0 18px rgba(0, 185, 255, 0.20);
-      cursor: pointer;
+    
+    .header {
+      text-align: center;
+      margin-bottom: 80px;
     }
-
-    h1 {
-      font-size: clamp(3.2rem, 9vw, 7.8rem);
-      letter-spacing: 0.08em;
-      line-height: 0.9;
-      color: #f5f5f5;
-      text-shadow: 0 0 18px rgba(255,255,255,0.25);
-      margin-bottom: 20px;
-    }
-
+    
     .emblem {
-      width: 170px;
-      max-width: 55%;
-      margin: 4px auto 22px;
+      width: 140px;
+      margin: 0 auto 30px;
       display: block;
-      border-radius: 18px;
+      border-radius: 16px;
       filter: drop-shadow(0 0 18px rgba(255, 0, 90, 0.35))
               drop-shadow(0 0 16px rgba(0, 200, 255, 0.22));
-      transition: transform 0.3s ease, filter 0.3s ease;
+      transition: transform 0.3s ease;
     }
-
+    
     .emblem:hover {
-      transform: scale(1.04);
-      filter: drop-shadow(0 0 24px rgba(255, 0, 90, 0.45))
-              drop-shadow(0 0 22px rgba(0, 200, 255, 0.32));
+      transform: scale(1.05);
     }
-
-    .powered {
-      font-size: clamp(1.25rem, 3vw, 2rem);
-      color: #cfcfd6;
-      margin-bottom: 0;
+    
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+      color: #f5f5f5;
+      text-shadow: 0 0 18px rgba(255,255,255,0.15);
+      margin-bottom: 15px;
+      font-weight: 700;
     }
-
-    .aiqx {
-      display: block;
-      font-size: clamp(4rem, 12vw, 9rem);
-      font-weight: 900;
-      line-height: 0.9;
+    
+    .tagline {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: #b8b8c4;
+      margin-bottom: 50px;
       letter-spacing: 0.03em;
-      background: linear-gradient(110deg, #ff003c 0%, #ff5278 24%, #ffffff 52%, #8d93a3 73%, #ffffff 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 28px rgba(255, 0, 70, 0.45);
-      margin: 4px 0 18px;
     }
-
-    .tm {
-      color: #e8edf5;
-      text-shadow: 0 0 12px rgba(255,255,255,0.45);
-      font-size: 0.42em;
-      vertical-align: super;
-      margin-left: 6px;
-    }
-
-    .subtitle {
-      color: #e7e7ec;
-      font-size: clamp(1.1rem, 2.3vw, 1.55rem);
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .quantum {
-      color: #00c8ff;
-      font-weight: 900;
-      text-shadow: 0 0 14px rgba(0, 200, 255, 0.55);
-    }
-
-    .ai {
-      color: #ff285c;
-      font-weight: 900;
-      text-shadow: 0 0 12px rgba(255, 40, 92, 0.45);
-    }
-
-    .mission {
-      max-width: 780px;
-      margin: 0 auto 34px;
-      color: #bfc7d5;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    .cta {
-      display: inline-block;
-      padding: 18px 34px;
-      border: 1px solid #ff285c;
-      border-radius: 14px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: rgba(255, 0, 80, 0.06);
-      box-shadow: 0 0 22px rgba(255, 0, 80, 0.25);
-      transition: 0.25s ease;
-      margin-bottom: 18px;
-      cursor: pointer;
-    }
-
-    .cta:hover, .clickable:hover {
-      transform: translateY(-3px);
-      background: rgba(255, 0, 80, 0.15);
-      border-color: rgba(0, 200, 255, 0.55);
-      box-shadow: 0 0 26px rgba(0, 200, 255, 0.18), 0 0 22px rgba(255, 0, 80, 0.20);
-    }
-
-    .status-line {
-      color: #bdbdc7;
-      letter-spacing: 0.24em;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      margin: 6px 0 54px;
-    }
-
-    .status-line span {
-      color: #57ff72;
-      font-weight: 900;
-    }
-
-    .section-title {
-      font-size: 1rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: #f3f3f3;
-      margin-bottom: 24px;
-    }
-
-    .grid {
+    
+    .sections {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 14px;
-      margin-bottom: 40px;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 80px;
     }
-
-    .card, .status-card {
-      border: 1px solid rgba(255, 40, 92, 0.22);
-      border-radius: 14px;
-      padding: 24px 14px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
-      box-shadow: inset 0 0 22px rgba(255, 0, 80, 0.03);
-      transition: 0.25s ease;
-      cursor: pointer;
+    
+    .section {
+      border: 1px solid rgba(255, 0, 100, 0.25);
+      border-radius: 16px;
+      padding: 40px 30px;
+      background: rgba(3, 5, 10, 0.5);
+      box-shadow: 0 0 30px rgba(255, 0, 90, 0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .section:hover {
+      border-color: rgba(0, 185, 255, 0.4);
+      box-shadow: 0 0 40px rgba(0, 185, 255, 0.12);
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+      color: #00b9ff;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    
+    .section-title.highlight {
+      color: #ff0070;
+    }
+    
+    .section-desc {
+      font-size: 1rem;
+      color: #c0c0cc;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border: 2px solid;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
       text-decoration: none;
-      color: inherit;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    
+    .btn-primary {
+      border-color: #00b9ff;
+      color: #00b9ff;
+      background: transparent;
+    }
+    
+    .btn-primary:hover {
+      background: rgba(0, 185, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 185, 255, 0.3);
+    }
+    
+    .btn-secondary {
+      border-color: #ff0070;
+      color: #ff0070;
+      background: transparent;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 0, 112, 0.1);
+      box-shadow: 0 0 20px rgba(255, 0, 112, 0.3);
+    }
+    
+    .btn-disabled {
+      border-color: #666;
+      color: #888;
+      cursor: not-allowed;
+      background: transparent;
+    }
+    
+    .form-group {
+      margin-bottom: 18px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: #b8b8c4;
+      font-weight: 500;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(0, 185, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-size: 0.95rem;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: rgba(0, 185, 255, 0.8);
+      box-shadow: 0 0 12px rgba(0, 185, 255, 0.15);
+    }
+    
+    .form-group input::placeholder {
+      color: #666;
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #00b9ff;
+      border-radius: 6px;
+      background: rgba(0, 185, 255, 0.1);
+      color: #00b9ff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    
+    .form-submit:hover {
+      background: rgba(0, 185, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 185, 255, 0.3);
+    }
+    
+    .form-message {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    
+    .form-message.success {
+      background: rgba(76, 175, 80, 0.2);
+      color: #4caf50;
+      border: 1px solid rgba(76, 175, 80, 0.3);
       display: block;
     }
-
-    .icon {
-      font-size: 2.3rem;
-      color: #ff285c;
-      margin-bottom: 14px;
+    
+    .form-message.error {
+      background: rgba(244, 67, 54, 0.2);
+      color: #f44336;
+      border: 1px solid rgba(244, 67, 54, 0.3);
+      display: block;
     }
-
-    .card h3, .status-card h3 {
-      font-size: 0.92rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #bfc0ca;
-      font-size: 0.88rem;
-      line-height: 1.45;
-    }
-
-    .status {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-bottom: 36px;
-    }
-
-    .green { color: #57ff72; }
-    .yellow { color: #ffd84d; }
-    .blue { color: #58a6ff; }
-
-    footer {
-      color: #a7a8b4;
-      font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      padding-top: 18px;
-    }
-
-    footer .brand {
-      color: #ffffff;
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    footer .footer-aiqx {
-      color: #ff285c;
-      font-weight: 900;
-      text-shadow: 0 0 10px rgba(255, 40, 92, 0.35);
-    }
-
-    footer .meaning {
-      margin-top: 8px;
-      color: #00c8ff;
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .footer-links {
-      margin: 18px 0;
+    
+    .footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 0, 100, 0.15);
+      color: #888;
       font-size: 0.85rem;
     }
-
-    .footer-links a {
-      color: #cfd8ff;
+    
+    .footer a {
+      color: #00b9ff;
       text-decoration: none;
-      border-bottom: 1px solid rgba(0, 200, 255, 0.35);
-      transition: 0.25s ease;
+      transition: color 0.3s ease;
     }
-
-    .footer-links a:hover {
-      color: #00c8ff;
-      border-bottom-color: #ff285c;
+    
+    .footer a:hover {
+      color: #ff0070;
     }
-
-    .notice {
-      display: none;
-      position: fixed;
-      left: 50%;
-      bottom: 24px;
-      transform: translateX(-50%);
-      background: rgba(3, 5, 10, 0.92);
-      border: 1px solid rgba(0, 200, 255, 0.55);
-      color: #ffffff;
-      padding: 14px 22px;
-      border-radius: 999px;
-      box-shadow: 0 0 28px rgba(0, 200, 255, 0.22);
-      z-index: 50;
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 980px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      .status { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 620px) {
-      .frame { padding: 28px 16px; }
-      .grid, .status { grid-template-columns: 1fr; }
-      .pill { letter-spacing: 0.22em; }
-      .cta { width: 100%; font-size: 0.9rem; }
-      .emblem { width: 145px; max-width: 70%; }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 16px;
+      }
+      
+      h1 {
+        margin-bottom: 20px;
+      }
+      
+      .section {
+        padding: 30px 20px;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="frame">
-      <button class="pill clickable" onclick="showNotice()">Quantum AI Ecosystem</button>
-
+  <div class="container">
+    
+    <div class="header">
+      <img src="Stemma%20JasVerse.png" alt="JASVERSE Logo" class="emblem">
       <h1>JASVERSE®</h1>
-
-      <img src="Stemma%20JasVerse.png" alt="Official JasVerse AIQX Emblem" class="emblem" />
-
-      <div class="powered">Powered by</div>
-      <div class="aiqx">AIQX<span class="tm">™</span></div>
-
-      <p class="subtitle">
-        <span class="quantum">Quantum</span> <span class="ai">AI</span> for Apps, Startups, Modules<br />
-        & Autonomous Systems
-      </p>
-
-      <p class="mission">
-        JASVERSE is a Quantum AI-powered ecosystem focused on creating applications,
-        startups, software modules and autonomous systems for the next generation.
-      </p>
-
-      <a href="javascript:void(0)" class="cta" onclick="showNotice()">🔑 Enter with TheBossKeyAIQX<span class="tm">™</span></a>
-
-      <div class="status-line">Ecosystem Status: <span>Active</span></div>
-
-      <h2 class="section-title">The JasVerse Vision</h2>
-
-      <div class="grid">
-        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
-          <div class="icon">🧠</div>
-          <h3>AI Applications</h3>
-          <p>Intelligent solutions for the next generation.</p>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
-          <div class="icon">🚀</div>
-          <h3>Startup Innovation</h3>
-          <p>Building and scaling the future.</p>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
-          <div class="icon">⌘</div>
-          <h3>Automation</h3>
-          <p>Processes that think, learn and evolve.</p>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
-          <div class="icon">◈</div>
-          <h3>Open Source Tech</h3>
-          <p>Knowledge shared, future amplified.</p>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
-          <div class="icon">⚙️</div>
-          <h3>Autonomous Systems</h3>
-          <p>Systems that operate and evolve autonomously.</p>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="card clickable">
-          <div class="icon">▦</div>
-          <h3>Digital Infrastructure</h3>
-          <p>Secure, scalable and always online.</p>
-        </a>
+      <p class="tagline">Apps built for people who want control.</p>
+    </div>
+    
+    <div class="sections">
+      
+      <div class="section">
+        <h2 class="section-title">🔑 The Boss Key</h2>
+        <p class="section-desc">
+          One key to rule them all. Biometric authentication without Google, Facebook, or corporate gatekeepers. 
+          Coming soon.
+        </p>
+        <button class="btn btn-primary" onclick="scrollToForm()">Get Early Access</button>
       </div>
-
-      <h2 class="section-title">Current Status</h2>
-
-      <div class="status">
-        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
-          <h3>Infrastructure</h3>
-          <strong class="green">ONLINE</strong>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
-          <h3>Security</h3>
-          <strong class="green">ACTIVE</strong>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
-          <h3>Development</h3>
-          <strong class="yellow">IN PROGRESS</strong>
-        </a>
-        <a href="javascript:void(0)" onclick="showNotice()" class="status-card clickable">
-          <h3>Launch</h3>
-          <strong class="blue">COMING SOON</strong>
-        </a>
+      
+      <div class="section">
+        <h2 class="section-title highlight">📊 ByeByePrice</h2>
+        <p class="section-desc">
+          Real price comparisons. Real discounts. No fake sales, no manipulation. 
+          Italian anti-scam comparison engine powered by real data.
+        </p>
+        <a href="https://byebyeprice.com" target="_blank" class="btn btn-secondary">Launch Beta</a>
       </div>
-
-      <footer>
-        <div class="brand">JASVERSE®</div>
-        <div>Powered by <span class="footer-aiqx">AIQX<span class="tm">™</span></span></div>
-        <div class="meaning">Artificial Intelligence Quantic eXperience</div>
-
-        <div class="footer-links">
-          <a href="privacy.html">Privacy Policy</a>
-          &nbsp;|&nbsp;
-          <a href="terms.html">Terms of Use</a>
+      
+      <div class="section">
+        <h2 class="section-title">🚀 Coming Next</h2>
+        <p class="section-desc">
+          More apps. Same mission. Control, transparency, honesty.
+          Built by founders who use their own products.
+        </p>
+        <button class="btn btn-disabled" disabled>Stay Tuned</button>
+      </div>
+      
+    </div>
+    
+    <div class="section" id="waitlist-section" style="max-width: 500px; margin: 0 auto;">
+      <h2 class="section-title" style="text-align: center;">Early Access: The Boss Key</h2>
+      <p class="section-desc" style="text-align: center; margin-bottom: 30px;">
+        Be first to test the future of authentication.
+      </p>
+      
+      <form id="waitlistForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your@email.com" 
+            required
+          >
         </div>
-
-        <div>© 2026 JASVERSE. All Rights Reserved.</div>
-      </footer>
-    </section>
-  </main>
-
-  <div id="notice" class="notice">Module access coming soon</div>
-
+        
+        <div class="form-group">
+          <label for="name">Name (optional)</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Your name"
+          >
+        </div>
+        
+        <button type="submit" class="form-submit">Join Waitlist</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+    
+    <div class="footer">
+      <p>© 2026 JASVERSE®. All rights reserved.</p>
+      <p style="margin-top: 12px;">
+        <a href="privacy.html">Privacy</a> • 
+        <a href="terms.html">Terms</a>
+      </p>
+    </div>
+    
+  </div>
+  
   <script>
-    function showNotice() {
-      const notice = document.getElementById("notice");
-      notice.style.display = "block";
-      clearTimeout(window.jasverseNoticeTimer);
-      window.jasverseNoticeTimer = setTimeout(function () {
-        notice.style.display = "none";
-      }, 1800);
+    function scrollToForm() {
+      document.getElementById('waitlist-section').scrollIntoView({ behavior: 'smooth' });
     }
+    
+    document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const name = document.getElementById('name').value;
+      const formMessage = document.getElementById('formMessage');
+      
+      if (!email) {
+        formMessage.textContent = 'Please enter a valid email.';
+        formMessage.className = 'form-message error';
+        return;
+      }
+      
+      try {
+        formMessage.textContent = `✓ You're on the list! We'll email you at ${email} when The Boss Key is ready.`;
+        formMessage.className = 'form-message success';
+        
+        this.reset();
+        
+      } catch (error) {
+        formMessage.textContent = 'Something went wrong. Try again.';
+        formMessage.className = 'form-message error';
+      }
+    });
   </script>
 </body>
 </html>
